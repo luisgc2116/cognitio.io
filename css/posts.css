@@ -219,7 +219,15 @@ hr.slender {
 }
 
 .left_block_text {
-    /*padding-bottom: 15px*/
+    padding-bottom: 15px;
+}
+
+.left_block_text_indent_0 {
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .left_block_text_indent_1 {
