@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Intellectus EX-Machina</title>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1">
+	<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  	<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  	</script> -->
+	<link rel="blog1" 
+		href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+	  	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	  	crossorigin="anonymous">
+	
+    <link rel="stylesheet" type="text/css" href="../../../../css/posts.css">
+	<meta charset="utf-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+	<link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+	<!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML"></script>
+	<link rel="canonical" href="https://luisgc2116.github.io/luis_notes/">
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+
+<body>
+    <!--- Header and nav template site-wide -->
+	<header>
+	    <nav class="group">
+	    <a href="/luis_notes/" class="header_items">Contents</a>
+	    <a href="https://github.com/luisgc2116/" class="header_items">GitHub</a>
+	    </nav>
+	</header>
+
+	<section>
+		<h2 class="article_headers">Fundamentals of Probability: Introduction to Probability</h2>
+		
+		<h3 class="article_headers">I. Introduction:</h3>
+		<div class='format_block'>
+			<div class='format_block_left'>
+				<p class="left_block_text">
+					Main Idea:
+				</p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						After introducing the concept of distributions as the probability mappings to the possible values of a random value, here we will look at different types of distributions.
+
+						Distributions are often split between discrete and continuous. Discrete refers to random variables having individually seperable values, eg. integer values. Continuous refers to random variables having a range of values that take any value.
+						<br><br>
+					</p>
+					<div class="left_block_text_indent_2">
+						<p class='left_indented_p2'>
+								<i>Largely, the expectations or distrutions we are trying to estimate are intractible, and so approximation is usually the best method toward inference. </i> 
+								<br><br>
+						</p>
+					</div>
+				</div>
+				<button class="collapsible">More on Background and History:</button>
+				<div class="content">
+				 	<p class="collapsible_text">
+				 		The usual example for probabilities is to reference a dice; here, the probability of each side would be 1/6, because there are 6 total elements, and each element appears once. What if we have two faces that have the same side? Well the value of that side would have a probability of 2/6.
+				 		<br><br><br>
+				 	</p>
+				</div>	
+			</div>
+			<div class='format_block_right'>
+				<p class="right_block_titles">Note: <br> </p>
+				<p class="right_block_descriptions">
+					A better way to describe an element is as an <i>event</i>>. We will see a more defined mathematical framework for this, but for now, we can just name them 
+				</p>
+			</div> 
+		</div>
+
+		<h3 class="article_headers">III. Theory Pt.2:</h3>
+		<div class='format_block'>
+			<!-- LEFT BLOCK -->
+			<div class='format_block_left'>
+				<p>Distributions: Discrete Distributions</p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The sum of all probabilities must equal 1, but there's no real other restriction on how the values of these probabilities should be distributed. You can have probabilities that are all equal, or ones with high probabilities for some elements and low for others. 
+
+						We call the distribution of probabilities for a set of elements simply a <i>distribution</i>. As long as sum of all probabilities in this distribution sums to 1, the distribution is valid. 
+
+						Further, the <i>support</i> is defined as the possible values that the distribution takes.
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align} 
+								\sum_{i=1}^\infty P(\text{elem_i}) = \sum_{i=1}^\infty \frac{\text{elem}_i}{\text{all_elements}}
+							\end{align}<br>
+					</p>
+				</div>
+
+				<p>1. Bernoulli Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Bernoulli Distribution is based on the idea of a <i>Bernoulli trial</i>, which is: "a random experiment with exactly two possible outcomes, 'success' and 'failure', in which the probability of success is the same every time the experiment is conducted". Moreover, the Bernoulli distribution maps the outcomes from a Bernoulli trial to a probability, where 'success'(or 1) is given the probability \( p \), and 'failure'(or 0) is give the probability of \( 1-p \), so 
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{Bern}(p)
+							\end{align}<br>
+							
+							\begin{align}
+								p(X=x) = 
+									\begin{cases} 
+										p, & \text{if } x=1 \\
+										1-p, & \text{if } x=0 \\
+									\end{cases}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: p is just the variable that represents the probability of getting a success, which is \( p(X=1) = p \)
+
+						The support of p is \( {0, 1} \), and we can calculate expectation and variance the Bernoulli distribution as  
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=1] &= p \\
+						    \text{Var}[X=1] &= p (1-p)
+						\end{align}
+					</p>
+				</div>
+
+				<p>2. Geometric Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Geometric Distribution describes sequences of size k composed of Bernoulli trials such that the k-th trial is the <i>first success</i> . Because Bernoulli trials are independent and unique, we can also think of this as length-k sequences of Bernoulli trials that have exactly one success anywhere in the sequence.
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{Geo}(p)
+							\end{align}<br>
+							
+							\begin{align}
+								p(X=k ; p) &= (1-p)^{k-1} p
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: k refers to the length of the sequences. The k-th element is usually expressed to be the first and only success.
+						The support of k is \( {1, 2, \dots } \).  
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=1] &= \frac{1}{p} \\
+						    \text{Var}[X=k] &= \frac{1-p}{p^2}
+						\end{align}
+					</p>
+				</div>
+
+				<p>3. Binomial Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Binomial Distribution describes "the probability of getting exactly k successes in n independent Bernoulli trials". In other words, it describes the probability of getting k unique and independent sequences from n Bernoulli trials. The Binomial is seen as a generalization of the Bernoulli and Geometric distribution since they serve as special cases of the Binomial distribution.
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X &\sim \text{Bin}(n,p)
+							\end{align}<br>
+							
+							\begin{align}
+								p(X=k; n,p) &= {n \choose k}p^k(1-p)^{n-k} \\
+    							{n \choose k} &=  \frac{n!}{k! \; (n-k)!}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: k is the number of successes in a sequence, n is the length of each sequence, and p is the given probability of a Bernoulli having an output of success.
+
+						The support of k is \( k \in {0, 1, \dots, n} \), the suppport of n is \( n \in {1, \dots} \) and the support of p is \( p \in {0, 1} \).
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=k] &= np \\
+						    \text{Var}[X=k] &= np(1-p)
+						\end{align}
+					</p>
+				</div>
+				<button class="collapsible">Binomial Coefficient:</button>
+					<div class="content" style="margin-bottom: 45px;">
+					 	<p class="collapsible_text">
+					 		The Binomial Coeffient, \( n \choose k \) represents the number of unique and independent k-length subsequences we can make using the elements in the original sequence of length n. What we mean by independent is that sequences with the same values but different positions are considered equal, so \( \{ a,b,c \} = \{ b,c,a \} = \dots \). <br><br>
+
+					 		To understand this better, we can look at \( n \choose k=n \); this gives us the <i>unique k-length subsequences we can make</i>. Given that \( k=n \), we can make only a single unique and independent subsequence since all other combinations give us sequences with the same values but under different positions, all of which are equal to each other if we want independence.  <br><br>
+
+					 		Mathematically, \( n \choose k \) can be expressed as the unique non-independent n-length sequences, \( n! \), divided by both the unique number of non-independent k-length sequences, \( k! \), and the unique number of non-independent (n-k)-length sequences, \( (n-k)! \).
+
+					 		\begin{align}
+					 			n \choose k = \frac{n!}{n! \; (n-k)!}
+					 		\end{align}
+
+
+					 		<br><br><br>
+					 	</p>
+					</div>	
+
+				<p >4. Multinomial Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						 The Multinomial distribution describes the number of n successes for k categories. In other words, "for n independent trials each of which leads to a success for exactly one of k categories, with each category having a given fixed success probability, the multinomial distribution gives the probability of any particular combination of numbers of successes for the various categories." For example, it models the probability of counts for each side of a k-sided die rolled n times. <br>
+
+						 The Multinomial distribution is seen as a generalization of the Binomial distribution since the Binomial distribution is a special case of the Multinomial distribution. The Multinomial distribution is the Binomial distribution when the number of categories is two, \( k=2 \), and the number of successes is greater than or equal to one, \( n \geq 1 \). The Multinomial distribution is the Bernoulli distribution when the number of categories is two, \( k=2 \), and the number of successes is one, \( n=1 \). 
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{Multinomial}(x_1, \dots, x_k; n, p_1, \dots, p_n)
+							\end{align}<br>
+							
+							\begin{align}
+							    f(x_1, \dots, x_k; n, p_1, \dots, p_n)= 
+							        \begin{cases}
+							            \frac{n!}{x_1! \dots x_k!}p_1^{x_1} \dots p_k^{x_k},& \text{when } \sum_{i=1}^k x_i = n\\
+							            0,              & \text{otherwise}
+							        \end{cases}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: k refers to the number of categories in X, n refers to the length of the sequences, and \( p_i \) is the probability of success in each i-th category.
+						The support of x is \( x_i \in \{ 0, 1, \dots \} \), the support for i is \( i \in \{ 1, \dots, k \} \)
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X_i=k] &= np_i \\
+						    \text{Var}[X_i=k] &= np_i(1-p_i)
+						\end{align}
+					</p>
+				</div>
+
+				<p>5. Poisson Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Poisson distribution describes the number of k successes that occurs in an interval of fixed \( \lambda \). It is therefore related to the Binomial Distribution if we take take the limit of trials going to infinity; here the probability of successes becomes the value the interval \( \lambda \) divided by the number of trials.
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{Poi}(\lambda) 
+							\end{align}<br>
+							
+							\begin{align}
+								p(X=k; \lambda) &= \frac{\lambda^k e^{-\lambda}}{k!}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: k refers to number of successes in an interval \( \lambda \). The support of \( \lambda \) is \( \lambda \in \mathbb{R} \), and the support for k are the natural numbers starting from zero, \( k \in \{ 0, 1, \dots \}\).
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=k] &= \lambda \\
+						    \text{Var}[X=k] &= \lambda
+						\end{align}
+					</p>
+				</div>
+			</div>
+
+			<!-- RIGHT BLOCK -->
+			<div class='format_block_right'>
+
+				<p class="right_block_titles"> Note: <br> </p>
+				<p class="right_block_descriptions">
+					Note: Weighted averages are \( \min(X) \leq \overline{X} \leq \max(X) \).
+				</p>
+
+				<p class="right_block_titles"> Note: <br> </p>
+				<p class="right_block_descriptions">
+					If we have a Bernoulli with \( X \sim Bern(\frac{1}{2}) \), then the random variable \( 2X-1 \) is known as a Rademacher distribution, which has unique values \( X \in \{-1,1\} \).
+				</p>
+
+				
+			</div>
+		</div>
+
+		<h3 class="article_headers">III. Theory Pt.2:</h3>
+		<div class='format_block'>
+			<!-- LEFT BLOCK -->
+			<div class='format_block_left'>
+				<p>Distributions: Continuous Distributions</p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						Continuous distributions maps a probability density to a range of values using a probability density; they create a probability distribution over a range of values.
+					</p>
+				</div>
+
+				<p>1. Exponential Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Exponential distribution describes the probability the time between events that are continuous and independent at a constant average rate. Events that behave in this manner are described by a Poisson point process - a process in which events occur continuously and independently at a constant average rate. <br><br>
+
+						The Exponential distribution is the continuous analogue of the geometric distribution. A particular property of the Exponential distribution is that is it <i>memoryless</i>, which means a future event only depends on the current event. 
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{Exp}(\lambda)
+							\end{align}<br>
+							
+							\begin{align}
+							    f(x; \lambda) = 
+							        \begin{cases}
+							            \lambda e^{-\lambda x}, & x \geq 0\\
+							            0,                      & x < 0
+							        \end{cases}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: p is just the variable   that represents the probability of getting a success, which is \( p(X=1) = p \)
+						
+						$The support of x is \( x \in [0, \infty ) \), with \( \lambda > 0 \). 
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=k] &= \frac{1}{\lambda} \\
+						    \text{Var}[X=k] &= \frac{1}{\lambda^2}
+						\end{align}
+					</p>
+				</div>
+
+				<p>2. Gamma Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Gamma distribution is what's called a <i>two-parameter family</i> of probability distributions, which means it serves as a generalization of a family of distributions, including the Exponential and Chi-Squared distributions. The Gamma distribution has two parameters, a shape parameter \( \alpha= k \) and an inverse scale parameter \( \beta=\frac{1}{\theta} \), called a rate parameter.
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{Gamma}(\alpha, \beta)
+							\end{align}<br>
+							
+							\begin{align}
+								p(X=x; \lambda) &= \frac{\beta^\alpha x^{\alpha -1} e^{-\beta x}}{\Gamma(\alpha)}
+							\end{align}<br>
+
+							\begin{align}
+								\Gamma(n) = (n-1)!
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: The Gamma distribution is parameterized by \( \alpha= k \), the shape parameter, and the rate parameter \( \beta=\frac{1}{\theta} \).			<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=k] &= \frac{\alpha}{\beta} \\
+						    \text{Var}[X=k] &= \frac{\alpha}{\beta^2}
+						\end{align}
+					</p>
+					<button class="collapsible">Gamma Function:</button>
+					<div class="content" style="margin-bottom: 45px;">
+					 	<p class="collapsible_text">
+					 		The Gamma Function is a generalized form of the factorial to take non-integer values. For integers it is defined as 
+					 		\begin{equation}
+					 			\Gamma(n) = (n-1)!
+					 		\end{equation}
+
+					 		For non-integer values, the gamma function is,
+					 		\begin{equation}
+					 			\Gamma(z) = \int_{0}^{\infty} x^{z-1} e^{-x} dx
+					 		\end{equation}
+
+
+					 		<br><br><br>
+					 	</p>
+					</div>	
+				</div>
+
+				<p>3. Uniform Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Gamma distribution is what's called a <i>two-parameter family</i> of probability distributions, which means it serves as a generalization of a family of distributions, including the Exponential and Chi-Squared distributions. The Gamma distribution has two parameters, a shape parameter \( \alpha= k \) and an inverse scale parameter \( \beta=\frac{1}{\theta} \), called a rate parameter.
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{U}(a, b)
+							\end{align}<br>
+							
+							\begin{align}
+							    f(x) = 
+							        \begin{cases}
+							            \frac{1}{b-a}, & \text{for } a \leq x \leq b\\
+							            0, & \text{for } x < a, x > b
+							        \end{cases}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: The parameterization of the Uniform distribution is an interval between a and b. The support of a and b are: \( -\infty < a < b < \infty \).	
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=k] &= \frac{1}{2} (a+b) \\
+						    \text{Var}[X=k] &= \frac{1}{12} (b-a)^2
+						\end{align}
+					</p>
+				</div>
+
+				<p>4. Beta Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Beta distribution is another family of distributions, but this time, it is for distributions defined on the interval \( [0,1] \).
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{Beta}(\alpha, \beta) 
+							\end{align}<br>
+							
+							\begin{align}
+							    p(X=x; \alpha, \beta) 
+							            &= \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) \Gamma(\beta)} x^{\alpha - 1} (1-x)^{\beta - 1} \\
+							            &= \frac{1}{B(\alpha, \beta)} x^{\alpha - 1} (1-x)^{\beta - 1}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: The Gamma distribution is parameterized by \( \alpha= k \), the shape parameter, and the rate parameter \( \beta=\frac{1}{\theta} \).			<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=k] &= \frac{\alpha}{\alpha + \beta} \\
+						    \text{Var}[X=k] &= \frac{\alpha \beta}{(\alpha + \beta)^2(\alpha + \beta + 1)}
+						\end{align}
+					</p>
+				</div>
+
+				<p>5. Gaussian Distribution: </p>
+				<div class="left_block_text_indent_1">
+					<p class='left_indented_p1'>
+						The Gamma distribution is one the most important distributions, which is related to the Central Limit Theorem.
+						<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+							\begin{align}
+								X \sim \text{N}(\mu, \sigma^2)
+							\end{align}<br>
+							
+							\begin{align}
+							    p(X=x; \lambda) &= \frac{1}{\sigma 2 \pi} e^{\frac{1}{2}\big(\frac{x-\mu}{\sigma}\big)^2}
+							\end{align}<br>
+
+					</p>
+
+					<p class='left_indented_p1'>
+						Notation: The Gamma distribution is parameterized by \( \alpha= k \), the shape parameter, and the rate parameter \( \beta=\frac{1}{\theta} \).			<br><br>
+					</p>
+
+					<p class="equation_left_indent_1">
+						\begin{align}
+						    \mathbb{E}[X=k] &= \mu \\
+						    \text{Var}[X=k] &= \sigma^2
+						\end{align}
+					</p>
+				</div>
+
+
+			</div>
+
+			<!-- RIGHT BLOCK -->
+			<div class='format_block_right'>
+
+				<p class="right_block_titles"> Note: <br> </p>
+				<p class="right_block_descriptions">
+					Note: Weighted averages are \( \min(X) \leq \overline{X} \leq \max(X) \).
+				</p>
+
+				<p class="right_block_titles"> Note: <br> </p>
+				<p class="right_block_descriptions">
+					If we have a Bernoulli with \( X \sim Bern(\frac{1}{2}) \), then the random variable \( 2X-1 \) is known as a Rademacher distribution, which has unique values \( X \in \{-1,1\} \).
+				</p>
+
+				
+			</div>
+		</div>
+
+		<div class="left_block_space">
+			
+		</div>
+
+	</section>
+
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.maxHeight){
+		      content.style.maxHeight = null;
+		    } else {
+		      content.style.maxHeight = content.scrollHeight + "px";
+		    } 
+		  });
+		}
+
+		var coll = document.getElementsByClassName("collapsible_right");
+		var i;
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.maxHeight){
+		      content.style.maxHeight = null;
+		    } else {
+		      content.style.maxHeight = content.scrollHeight + "px";
+		    } 
+		  });
+		}
+	</script>
+</body>
+
+<!-- <footer>
+	<hr class="footer_line">
+	<h3>Sources</h3>
+</footer> -->
+</html>
